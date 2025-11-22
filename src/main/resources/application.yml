@@ -1,0 +1,17 @@
+# WordPress API Konfiguration
+wordpress:
+  api:
+    # Die Basis-URL der WordPress REST API des Nanoblogs
+    url: "https://nanoblog.unibas.ch/wp-json"
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nanoblog_db
+    username: user
+    password: password
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
